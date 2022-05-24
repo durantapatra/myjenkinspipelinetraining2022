@@ -4,26 +4,26 @@ agent any
 
 stages {
 	stage('SCM') {
-		steps  {
+		steps {
 			echo "git pull my code for java app"
 			git 'https://github.com/vimallinuxworld13/simple-java-maven-app.git'
 		}
 	}
 
 	stage('Build') {
-		steps  {
+		steps {
 			sh 'mvn clean package'
 		}
 	}
 
-	stage('Test') {
-		steps  {
-			echo "test my final webapp"
+	stage('Deploy') {
+		steps {
+			sh 'java -jar target/*.jar'
 		}
 	}
 
 	stage('Deploy to prod') {
-		steps  {
+		steps {
 			echo "my final webapp to production"
 		}
 	}
