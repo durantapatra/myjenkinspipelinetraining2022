@@ -9,14 +9,18 @@ stages {
 			echo "git pull my code step2"
 		}
 	}
+
 	stage('Deploy') {
 		steps  {
 			echo "deploying my code"
 		}
 	}
+
 	stage('Test') {
 		steps  {
 			echo "test my final webapp"
 		}
 	}
+
+
 }
