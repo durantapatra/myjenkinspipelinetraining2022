@@ -22,6 +22,12 @@ stages {
 		}
 	}
 
+	stage('Deploy to prod') {
+		steps  {
+			echo "my final webapp to production"
+		}
+	}
+
 
 }
 
